@@ -17,7 +17,7 @@ exports.verifyToken = async (req, res, next) => {
         }
 
         // Verify token
-        jwt.verify(token, 'nodejsapp', async (err, decoded) => {
+        jwt.verify(token, process.env.SECRET_KEY, async (err, decoded) => {
             if (err) {
                 return res.status(401).send({
                     message: "Failed to authenticate token."

@@ -1,7 +1,7 @@
 const config = require('mongoose');
 const conection = async()=>{
 
-    let url = 'mongodb+srv://kjisu480:djGxiBXVY85GkWss@cluster0.ftqmm.mongodb.net/nodejs?retryWrites=true&w=majority'
+    let url =  process.env.MONOGO_CONNECT;
     const dbconfig = {useNewUrlParser:true, useUnifiedTopology:true}
     try{
 
